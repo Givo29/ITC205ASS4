@@ -56,7 +56,6 @@ class IncorrectCalculationOfFinesTest {
 		loan.state = LoanState.OVER_DUE;
 		double amount = library.calculateOverDueFine(loan);
 
-		System.out.println(amount);
 		assertTrue(amount > 0.0);
 	}
 	
