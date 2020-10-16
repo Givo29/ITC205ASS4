@@ -15,6 +15,7 @@ import library.entities.ILoan;
 import library.entities.Library;
 import library.entities.Loan;
 import library.entities.Patron;
+import library.entities.ILoan.LoanState;
 import library.entities.helpers.BookHelper;
 import library.entities.helpers.ILoanHelper;
 import library.entities.helpers.LoanHelper;
@@ -51,9 +52,11 @@ class IncorrectCalculationOfFinesTest {
 
 	@Test
 	void testReturnOverdueLoan() {
-		loan.dueDate = pastDueDate;
+		loan.commit(1, pastDueDate);
+		loan.state = LoanState.OVER_DUE;
 		double amount = library.calculateOverDueFine(loan);
 
+		System.out.println(amount);
 		assertTrue(amount > 0.0);
 	}
 	
