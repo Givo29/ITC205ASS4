@@ -37,7 +37,7 @@ class IncorrectFineAmountLeviedTest {
 		java.util.Calendar cal = java.util.Calendar.getInstance();
 		cal.setTime(new Date());
 		now = cal.getTime();
-		cal.add(java.util.Calendar.HOUR, -48);
+		cal.add(java.util.Calendar.HOUR, -72);
 		pastDueDate = cal.getTime();
 	}
 	
@@ -56,6 +56,6 @@ class IncorrectFineAmountLeviedTest {
 		loan.state = LoanState.OVER_DUE;
 		double amount = library.calculateOverDueFine(loan);
 
-		assertEquals(amount, 2.0);
+		assertEquals(2.0, amount);
 	}
 }
