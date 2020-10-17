@@ -63,7 +63,7 @@ public class Calendar implements ICalendar {
 	@Override
 	public synchronized long getDaysDifference(Date targetDate) {
 		long diffMilliseconds = getDate().getTime() - targetDate.getTime();
-		long diffDays = diffMilliseconds / MILLIS_PER_DAY;
+		long diffDays = (long) Math.ceil((double) diffMilliseconds / (double) MILLIS_PER_DAY);
 		return diffDays;
 	}
 
