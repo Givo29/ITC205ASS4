@@ -7,7 +7,7 @@ public class Calendar implements ICalendar {
 
 	private static ICalendar self;
 	private static java.util.Calendar calendar;
-	private static final long MILLIS_PER_DAY = 86400000;
+	private static final long MILLIS_PER_DAY = 86400000L;
 
 	private Calendar() {
 		calendar = java.util.Calendar.getInstance();

@@ -8,13 +8,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import library.entities.Book;
-import library.entities.IBook;
-import library.entities.ILibrary;
-import library.entities.ILoan;
-import library.entities.Library;
-import library.entities.Loan;
-import library.entities.Patron;
 import library.entities.ILoan.LoanState;
 import library.entities.helpers.BookHelper;
 import library.entities.helpers.ILoanHelper;

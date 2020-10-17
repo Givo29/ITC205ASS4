@@ -37,7 +37,7 @@ class IncorrectFineAmountLeviedTest {
 		java.util.Calendar cal = java.util.Calendar.getInstance();
 		cal.setTime(new Date());
 		now = cal.getTime();
-		cal.add(java.util.Calendar.HOUR, -72);
+		cal.add(java.util.Calendar.HOUR, -48);
 		pastDueDate = cal.getTime();
 	}
 	
